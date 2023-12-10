@@ -57,10 +57,10 @@ while True:
     except ValueError:
         print("Invalid input.")
 
-# Perform fuzzy decision
+
 decision = fuzzy_decision(player_hand_value, dealer_card_value)
 
-# Print the output
+
 print("\nFuzzy Decision:")
 print("Hit:", fuzzy_rules(player_hand_value, dealer_card_value)[0])
 print("Stand:", fuzzy_rules(player_hand_value, dealer_card_value)[1])
