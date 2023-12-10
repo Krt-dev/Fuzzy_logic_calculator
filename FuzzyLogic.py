@@ -9,9 +9,10 @@ def membership_function(value, low, mid, high):
 
 
 def fuzzy_rules(player_hand, dealer_card):
-    low_player_hand = membership_function(player_hand, 4, 10, 16)
-    mid_player_hand = membership_function(player_hand, 10, 16, 21)
-    high_player_hand = membership_function(player_hand, 16, 21, 26)
+    low_player_hand = membership_function(player_hand, 4, 10, 14)
+    mid_player_hand = membership_function(player_hand, 10, 14, 18)
+    high_player_hand = membership_function(player_hand, 14, 18, 21)
+
 
     low_dealer_card = membership_function(dealer_card, 2, 6, 10)
     mid_dealer_card = membership_function(dealer_card, 6, 10, 14)
@@ -47,10 +48,10 @@ while True:
     try:
         print("\n---WELCOME TO BLACKJACK DECISION CALCULATOR---\n")
         print("\nInput the total sum of the 2 starting cards")
-        player_hand_value = int(input("Player's hand (between 4 and 26): "))
+        player_hand_value = int(input("Player's hand: "))
         print("\nInput the total sum of the dealers card")
-        dealer_card_value = int(input("Dealer's card (between 2 and 18): "))
-        if 4 <= player_hand_value <= 26 and 2 <= dealer_card_value <= 18:
+        dealer_card_value = int(input("Dealer's card: "))
+        if 4 <= player_hand_value <= 21 and 2 <= dealer_card_value <= 18:
             break
         else:
             print("Invalid input. Please enter valid values.")
